@@ -32,11 +32,11 @@ class FileAdapter(
         holder.name.text = file.name
 
         if (file.isDirectory) {
-            holder.icon.setImageResource(R.drawable.ic_folder)
+            holder.icon.setImageResource(R.drawable.ic_folder_cx)
             val count = file.list()?.size ?: 0
-            holder.details.text = "$count объектов"
+            holder.details.text = "$count объектов | " + formatDate(file.lastModified())
         } else {
-            holder.icon.setImageResource(R.drawable.ic_file)
+            holder.icon.setImageResource(R.drawable.ic_file_cx)
             holder.details.text = formatSize(file.length()) + " | " + formatDate(file.lastModified())
         }
 

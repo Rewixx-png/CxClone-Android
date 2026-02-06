@@ -7,12 +7,21 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Cx Brand Colors -->
+    <color name="cx_primary">#FF9800</color>
+    <color name="cx_primary_dark">#F57C00</color>
+    <color name="cx_background">#F5F5F5</color>
+    <color name="cx_card_bg">#FFFFFF</color>
+    <color name="cx_text_primary">#212121</color>
+    <color name="cx_text_secondary">#757575</color>
+    <color name="cx_divider">#E0E0E0</color>
     
-    <!-- CxClone Specific Colors -->
-    <color name="orange">#FF9800</color>
-    <color name="cx_blue">#2196F3</color>
-    <color name="cx_dark_blue">#1976D2</color>
+    <!-- Chart Colors -->
+    <color name="chart_used">#FF9800</color>
+    <color name="chart_free">#E0E0E0</color>
     
-    <color name="gray_light">#F0F0F0</color>
-    <color name="gray_text">#757575</color>
+    <!-- Icons -->
+    <color name="folder_yellow">#FFC107</color>
+    <color name="file_gray">#9E9E9E</color>
 </resources>

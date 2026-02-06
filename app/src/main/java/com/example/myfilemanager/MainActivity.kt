@@ -12,7 +12,6 @@ import android.provider.Settings
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -70,12 +69,26 @@ class MainActivity : AppCompatActivity() {
             
             val circle = findViewById<ProgressBar>(R.id.storageCircle)
             val text = findViewById<TextView>(R.id.percentText)
+            val details = findViewById<TextView>(R.id.storageDetails)
             
+            // Animation via ObjectAnimator could be added here, but simple set is safer for now
             circle.progress = percent
             text.text = "$percent%"
+            
+            val usedGB = formatSize(used)
+            val totalGB = formatSize(total)
+            details.text = "$usedGB / $totalGB"
+            
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+
+    private fun formatSize(size: Long): String {
+        if (size <= 0) return "0 GB"
+        val units = arrayOf("B", "KB", "MB", "GB", "TB")
+        val digitGroups = (Math.log10(size.toDouble()) / Math.log10(1024.0)).toInt()
+        return String.format("%.1f %s", size / Math.pow(1024.0, digitGroups.toDouble()), units[digitGroups])
     }
 
     private fun checkPermission(): Boolean {
