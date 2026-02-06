@@ -9,11 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:background="#EEEEEE"
-        android:text="/"/>
+        android:background="#E0E0E0"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:text="/storage/emulated/0"
+        android:textColor="@color/black"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 </LinearLayout>

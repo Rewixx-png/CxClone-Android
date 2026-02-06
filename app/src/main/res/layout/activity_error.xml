@@ -3,48 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="#FFF">
+    android:padding="24dp"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@android:drawable/ic_dialog_alert"
+        app:tint="@color/purple_500"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
 
     <TextView
-        android:text="Приложение упало :("
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#F44336"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/btnCopyError"
-        android:text="СКОПИРОВАТЬ ОШИБКУ"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFF"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="@string/error_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="10dp"
-        android:background="#EEEEEE"
-        android:padding="10dp">
+        android:layout_marginTop="16dp"
+        android:background="#F0F0F0"
+        android:padding="8dp">
 
         <TextView
             android:id="@+id/errorTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
-            android:textColor="#000"
             android:textSize="12sp"
-            android:text="Log..."/>
+            android:textColor="#D32F2F"
+            android:text="Stacktrace..."/>
     </ScrollView>
 
-    <Button
-        android:id="@+id/btnRestart"
-        android:text="ЗАКРЫТЬ"
-        android:layout_marginTop="10dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnCopyError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copy_log"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restart_app"/>
+    </LinearLayout>
+
 </LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cx Clone</string>
+    <string name="main_storage">Основная память</string>
+    <string name="free_space">Свободно</string>
+    <string name="error_title">Произошла ошибка</string>
+    <string name="copy_log">Копировать лог</string>
+    <string name="restart_app">Перезапустить</string>
+</resources>
