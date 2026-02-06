@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cx_blue">#03A9F4</color>
+    <color name="cx_orange">#FF9800</color>
+    <color name="cx_dark_blue">#2196F3</color>
+    <color name="cx_green">#4CAF50</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_bg">#F5F5F5</color>
+</resources>
